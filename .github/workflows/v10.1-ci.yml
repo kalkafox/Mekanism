@@ -21,7 +21,7 @@ jobs:
             - name: Check OS
               run: uname -r
             - name: Validate Gradle wrapper
-              uses: gradle/wrapper-validation-action@latest
+              uses: gradle/wrapper-validation-action
             - run: chmod +x ./gradlew
             - name: Build with Gradle
               run: ./gradlew -Dorg.gradle.jvmargs='-Xmx3G' build
