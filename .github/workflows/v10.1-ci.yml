@@ -15,13 +15,13 @@ jobs:
             - uses: actions/setup-java@v2
               with:
                   java-version: '8'
-                  distribution: 'zulu'
+                  distribution: 'adopt'
             - name: Check Java version
               run: java -version
             - name: Check OS
               run: uname -r
             - name: Validate Gradle wrapper
-              uses: gradle/wrapper-validation-action@v1
+              uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
             - run: chmod +x ./gradlew
             - name: Build with Gradle
               run: ./gradlew -Dorg.gradle.jvmargs='-Xmx3G' build
